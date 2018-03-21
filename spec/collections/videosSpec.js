@@ -22,6 +22,8 @@ describe ('VideosCollection', function() {
     });
 
     it('should initiate an ajax request when search is called with the specified data', function() {
+      console.log('search', collection.search);
+      console.log('fetch', collection.fetch);
       collection.search('something_to_search_for');
       expect(collection.fetch).to.have.been.calledWithMatch({data: {q: 'something_to_search_for'}});
     });
